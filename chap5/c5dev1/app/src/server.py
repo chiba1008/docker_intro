@@ -1,9 +1,7 @@
 import os, flask
-MESSAGE = os.environ['MESSAGE']
 PORT = int(os.environ['PORT'])
-
-app = flask.Flask('c2img2_app')
+app = flask.Flask('c5dev1_app')
 @app.route('/')
 def index():
-  return MESSAGE
+  return 'Hello Compose Flask'
 app.run(debug=True, host='0.0.0.0', port=PORT)
